@@ -1,0 +1,30 @@
+html {
+  background: $bgColor;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+}
+
+::-webkit-scrollbar-track
+{
+  background-color: transparent;
+}
+
+::-webkit-scrollbar
+{
+  width: 6px;
+  background-color: transparent;
+
+}
+
+::-webkit-scrollbar-thumb
+{
+  background-color: $mainColor;
+  border-radius: 10px;
+}
