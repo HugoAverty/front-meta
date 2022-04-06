@@ -1153,7 +1153,8 @@ footer {
         background-image: linear-gradient(225deg, #FFD109 0%, #B954FF 100%); }
     .block.block-reinforcement .reinforcement-text {
       color: #AFFFFE;
-      opacity: .8; }
+      opacity: .8;
+      line-height: 1.5; }
   .block.block-team .team-member:nth-child(2n) {
     margin-left: 50px; }
     @media only screen and (max-width: 64rem) {
