@@ -1,0 +1,43 @@
+.btn {
+  &.btn-mint {
+    background-image: linear-gradient(225deg, #FFFFFF 0%, #FFFFFF 27%, rgba(255,255,255,0.17) 100%);
+    border: 1px solid rgba(255,255,255,0.25);
+    transform: skewX(-20deg);
+    border-radius: 1px;
+    color: black;
+    font-weight: 800;
+  }
+}
+
+.block {
+  &.block-nft {
+    .nft-carrousel {
+      .nft-elt {
+        position: relative;
+        .nft-image {
+          img {
+            width: 100%;
+          }
+        }
+        .btn-mint-wrapper {
+          position: absolute;
+          bottom: 25px;
+          right: 30px;
+        }
+      }
+    }
+  }
+  &.block-informations {
+    padding-top: 50px;
+    .img-informations {
+      & > img {
+        width: 100%;
+      }
+    }
+    .txt-informations {
+      h4, .subtext, .subtitle {
+        text-align: left;
+      }
+    }
+  }
+}

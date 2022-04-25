@@ -1452,4 +1452,27 @@ footer {
       margin: auto;
       opacity: .6; }
 
+.btn.btn-mint {
+  background-image: linear-gradient(225deg, #FFFFFF 0%, #FFFFFF 27%, rgba(255, 255, 255, 0.17) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transform: skewX(-20deg);
+  border-radius: 1px;
+  color: black;
+  font-weight: 800; }
+
+.block.block-nft .nft-carrousel .nft-elt {
+  position: relative; }
+  .block.block-nft .nft-carrousel .nft-elt .nft-image img {
+    width: 100%; }
+  .block.block-nft .nft-carrousel .nft-elt .btn-mint-wrapper {
+    position: absolute;
+    bottom: 25px;
+    right: 30px; }
+.block.block-informations {
+  padding-top: 50px; }
+  .block.block-informations .img-informations > img {
+    width: 100%; }
+  .block.block-informations .txt-informations h4, .block.block-informations .txt-informations .subtext, .block.block-informations .txt-informations .subtitle {
+    text-align: left; }
+
 /*# sourceMappingURL=style.css.map */
