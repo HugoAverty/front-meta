@@ -1021,6 +1021,31 @@ header {
     header .header-social li {
       list-style: none;
       display: inline; }
+    header .header-social .header-btn {
+      text-decoration: none;
+      color: white;
+      border: 1px solid white;
+      padding: 19px 25px 15px;
+      display: inline-block;
+      margin-right: 20px;
+      font-family: "Roboto Condensed", sans-serif;
+      font-size: 13px;
+      position: relative;
+      -moz-transform: translateY(-4px);
+      -webkit-transform: translateY(-4px);
+      -o-transform: translateY(-4px);
+      -ms-transform: translateY(-4px);
+      transform: translateY(-4px);
+      background: rgba(0, 0, 0, 0.2); }
+      header .header-social .header-btn:before {
+        content: "";
+        position: absolute;
+        width: calc(100% + 2px);
+        height: 5px;
+        background: #B850FF;
+        background-image: linear-gradient(225deg, rgba(255, 209, 9, 0.72) 0%, rgba(255, 255, 255, 0) 100%);
+        top: -1px;
+        left: -1px; }
     header .header-social .header-social_links {
       padding: 15px;
       opacity: .5; }
@@ -1444,6 +1469,8 @@ footer {
   .btn.btn-secondary {
     position: relative;
     padding: 15px 40px 25px; }
+    .btn.btn-secondary.no-sub {
+      padding: 20px 40px; }
     .btn.btn-secondary > .csoon {
       font-size: 10px;
       position: absolute;
@@ -1460,19 +1487,128 @@ footer {
   color: black;
   font-weight: 800; }
 
-.block.block-nft .nft-carrousel .nft-elt {
-  position: relative; }
-  .block.block-nft .nft-carrousel .nft-elt .nft-image img {
-    width: 100%; }
-  .block.block-nft .nft-carrousel .nft-elt .btn-mint-wrapper {
-    position: absolute;
-    bottom: 25px;
-    right: 30px; }
+.block.block-nft {
+  padding: 75px 0; }
+  .block.block-nft h2 {
+    font-size: 42px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 65px;
+    -moz-transform: rotate(-5deg);
+    -webkit-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    transform: rotate(-5deg); }
+    .block.block-nft h2:after {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 75px;
+      border-radius: 4px;
+      height: 4px;
+      background-image: linear-gradient(225deg, #FFD109 0%, #B954FF 100%); }
+  .block.block-nft .nft-carrousel .nft-elt {
+    position: relative; }
+    .block.block-nft .nft-carrousel .nft-elt .nft-image {
+      position: relative; }
+      .block.block-nft .nft-carrousel .nft-elt .nft-image .character {
+        overflow: hidden;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: -30px;
+        left: 10px;
+        transform: rotate(-5deg); }
+        .block.block-nft .nft-carrousel .nft-elt .nft-image .character .character-img {
+          position: absolute;
+          height: 140%; }
+      .block.block-nft .nft-carrousel .nft-elt .nft-image .background-nft {
+        width: 100%; }
+    .block.block-nft .nft-carrousel .nft-elt .btn-mint-wrapper {
+      position: absolute;
+      bottom: 25px;
+      right: 30px; }
+  .block.block-nft .nft-more {
+    text-align: center; }
 .block.block-informations {
   padding-top: 50px; }
-  .block.block-informations .img-informations > img {
-    width: 100%; }
-  .block.block-informations .txt-informations h4, .block.block-informations .txt-informations .subtext, .block.block-informations .txt-informations .subtitle {
-    text-align: left; }
+  .block.block-informations .informations-wrapper {
+    margin-bottom: 75px; }
+    .block.block-informations .informations-wrapper .img-informations {
+      -moz-transform: rotate(0deg) skewX(-15deg);
+      -webkit-transform: rotate(0deg) skewX(-15deg);
+      -o-transform: rotate(0deg) skewX(-15deg);
+      -ms-transform: rotate(0deg) skewX(-15deg);
+      transform: rotate(0deg) skewX(-15deg);
+      border-radius: 5px;
+      min-height: 180px;
+      padding: 0;
+      overflow: hidden;
+      border: 10px solid rgba(255, 255, 255, 0.2); }
+      .block.block-informations .informations-wrapper .img-informations > div {
+        width: 120%;
+        height: 110%;
+        -moz-transform: translateX(-25px) skewX(15deg);
+        -webkit-transform: translateX(-25px) skewX(15deg);
+        -o-transform: translateX(-25px) skewX(15deg);
+        -ms-transform: translateX(-25px) skewX(15deg);
+        transform: translateX(-25px) skewX(15deg);
+        background: url("http://placekitten.com/192/108") center center;
+        background-size: cover; }
+    .block.block-informations .informations-wrapper .txt-informations {
+      padding: 0 50px; }
+      .block.block-informations .informations-wrapper .txt-informations h4, .block.block-informations .informations-wrapper .txt-informations .subtext, .block.block-informations .informations-wrapper .txt-informations .subtitle {
+        text-align: left; }
+        .block.block-informations .informations-wrapper .txt-informations h4.t-right, .block.block-informations .informations-wrapper .txt-informations .subtext.t-right, .block.block-informations .informations-wrapper .txt-informations .subtitle.t-right {
+          text-align: right; }
+      .block.block-informations .informations-wrapper .txt-informations h4 {
+        font-size: 32px;
+        margin-top: 30px;
+        font-family: "Roboto Condensed", sans-serif;
+        color: #AFFFFE; }
+.block.block-faq .accordion {
+  transform: translateZ(0); }
+  .block.block-faq .accordion > .accordion-toggle {
+    position: absolute;
+    opacity: 0;
+    display: none; }
+    .block.block-faq .accordion > .accordion-toggle:checked ~ label .arrow-down {
+      transform: rotate(180deg); }
+    .block.block-faq .accordion > .accordion-toggle:checked ~ section {
+      height: 200px; }
+  .block.block-faq .accordion > label {
+    position: relative;
+    display: block;
+    height: 60px;
+    line-height: 50px;
+    padding: 6px 20px;
+    font-size: 18px;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    margin-top: 15px;
+    color: #AFFFFE;
+    border-radius: 5px; }
+    .block.block-faq .accordion > label .arrow-down {
+      position: absolute;
+      top: 0;
+      right: 20px;
+      bottom: 0;
+      transform: rotate(0deg);
+      transition: .3s transform;
+      width: 24px;
+      margin: auto; }
+  .block.block-faq .accordion > section {
+    height: 0;
+    transition: .3s all;
+    overflow: hidden; }
+    .block.block-faq .accordion > section p {
+      margin: 15px 0;
+      padding: 0 20px;
+      font-size: 14px;
+      line-height: 1.5; }
 
 /*# sourceMappingURL=style.css.map */

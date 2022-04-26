@@ -11,11 +11,49 @@
 
 .block {
   &.block-nft {
+    padding: 75px 0;
+    h2 {
+      font-size: 42px;
+      text-align: center;
+      position: relative;
+      margin-bottom: 65px;
+      -moz-transform: rotate(-5deg);
+      -webkit-transform: rotate(-5deg);
+      -o-transform: rotate(-5deg);
+      -ms-transform: rotate(-5deg);
+      transform: rotate(-5deg);
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 75px;
+        border-radius: 4px;
+        height: 4px;
+        background-image: linear-gradient(225deg, #FFD109 0%, #B954FF 100%);
+      }
+    }
     .nft-carrousel {
       .nft-elt {
         position: relative;
         .nft-image {
-          img {
+          position: relative;
+          .character {
+            overflow: hidden;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: -30px;
+            left: 10px;
+            transform: rotate(-5deg);
+            .character-img {
+              position: absolute;
+              height: 140%;
+            }
+          }
+          .background-nft {
             width: 100%;
           }
         }
@@ -26,17 +64,102 @@
         }
       }
     }
+    .nft-more {
+      text-align: center;
+    }
   }
   &.block-informations {
     padding-top: 50px;
-    .img-informations {
-      & > img {
-        width: 100%;
+    .informations-wrapper {
+      margin-bottom: 75px;
+      .img-informations {
+        -moz-transform: rotate(0deg) skewX(-15deg);
+        -webkit-transform: rotate(0deg) skewX(-15deg);
+        -o-transform: rotate(0deg) skewX(-15deg);
+        -ms-transform: rotate(0deg) skewX(-15deg);
+        transform: rotate(0deg) skewX(-15deg);
+        border-radius: 5px;
+        min-height: 180px;
+        padding: 0;
+        overflow: hidden;
+        border: 10px solid rgba(255,255,255,.2);
+        & > div {
+          width: 120%;
+          height: 110%;
+          -moz-transform: translateX(-25px) skewX(15deg);
+          -webkit-transform: translateX(-25px) skewX(15deg);
+          -o-transform: translateX(-25px) skewX(15deg);
+          -ms-transform: translateX(-25px) skewX(15deg);
+          transform: translateX(-25px) skewX(15deg);
+          background: url("http://placekitten.com/192/108") center center;
+          background-size: cover;
+        }
+      }
+      .txt-informations {
+        padding: 0 50px;
+        h4, .subtext, .subtitle {
+          text-align: left;
+          &.t-right {
+            text-align: right;
+          }
+        }
+        h4 {
+          font-size: 32px;
+          margin-top: 30px;
+          font-family: $condensedFont;
+          color: $mainColor;
+        }
       }
     }
-    .txt-informations {
-      h4, .subtext, .subtitle {
-        text-align: left;
+  }
+  &.block-faq {
+    .accordion {
+      transform: translateZ(0);
+      & > .accordion-toggle{
+        position: absolute;
+        opacity: 0;
+        display: none;
+        &:checked ~ label .arrow-down {
+          transform: rotate(180deg);
+        }
+        &:checked ~ section{
+          height: 200px;
+        }
+      }
+      & > label {
+        position: relative;
+        display: block;
+        height: 60px;
+        line-height: 50px;
+        padding: 6px 20px;
+        font-size: 18px;
+        font-weight: 700;
+        background: rgba(255, 255, 255, 0.1);
+        cursor: pointer;
+        margin-top: 15px;
+        color: $mainColor;
+        border-radius: 5px;
+        .arrow-down {
+          position: absolute;
+          top: 0;
+          right: 20px;
+          bottom: 0;
+          transform: rotate(0deg);
+          transition: .3s transform;
+          width: 24px;
+          margin: auto;
+        }
+      }
+      & > section {
+        height: 0;
+        transition: .3s all;
+        overflow: hidden;
+        p {
+          margin: 15px 0;
+          padding: 0 20px;
+          font-size: 14px;
+          line-height: 1.5;
+        }
       }
     }
   }
