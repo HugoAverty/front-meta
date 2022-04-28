@@ -5,6 +5,7 @@ $bgColor: #15172F;
 $secondaryFont: 'Lato', sans-serif;
 $condensedFont: 'Roboto Condensed', sans-serif;;
 $mainColor: #AFFFFE;
+$electriColor: #56EAFF;
 
 @import "init";
 @import "mixins";
@@ -93,6 +94,9 @@ header {
       -ms-transform: translateY($translateValue);
       transform: translateY($translateValue);
       background: rgba(0,0,0,.2);
+      @media only screen and (max-width: $xs-max) {
+
+      }
       &:before {
         content: "";
         position: absolute;
@@ -113,7 +117,11 @@ header {
     }
   }
 }
-
+.nft-html {
+  .menu {
+    z-index: 100;
+  }
+}
 .menu {
   z-index: 11;
   position: fixed;
@@ -157,7 +165,7 @@ header {
   }
   @media only screen and (max-width: $sm-max) {
     left: 0;
-    top: 0;
+    top: auto;
     bottom: 0;
     margin: 0;
     height: 80px;
@@ -234,10 +242,17 @@ footer {
   z-index: 10;
   h3, h4 {
     font-family: $secondaryFont;
-    font-size: 44px;
     letter-spacing: -1.38px;
     text-align: center;
     margin-bottom: 15px;
+    font-size: 64px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    font-weight: 900;
+    color: transparent;
+    .full-fill {
+      color: white;
+    }
   }
   &.block-reinforcement {
     text-align: center;
@@ -449,6 +464,99 @@ footer {
     height: 100vh;
     z-index: 20;
     position: relative;
+    &.block-intro-nft {
+      background: none;
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background: url(../img/bg-services.jpg) no-repeat bottom center;
+        opacity: .3;
+      }
+      &:before {
+        content: "";
+        z-index: 2;
+        width: 100%;
+        height: 25%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(0deg, rgba(21,23,47,1) 0%, rgba(255,255,255,0) 100%);
+      }
+      .nft-content {
+        position: relative;
+        z-index: 3;
+        h1 {
+          text-align: center;
+          -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: $mainColor;
+          color: transparent;
+          font-size: 62px;
+          letter-spacing: -4px;
+          span {
+            color: $electriColor;
+          }
+          @media only screen and (max-width: $sm-max) {
+            font-size: 42px;
+            letter-spacing: -2px;
+          }
+          @media only screen and (max-width: $xs-max) {
+            font-size: 28px;
+            letter-spacing: -1px;
+          }
+        }
+        .subtitle {
+          text-align: center;
+          font-size: 15px;
+          font-weight: 300;
+          line-height: 1.5;
+          letter-spacing: 0.2px;
+          margin: 12px 0;
+          opacity: 1;
+          em {
+            font-style: italic;
+          }
+          strong {
+            font-weight: 600;
+          }
+          @media only screen and (max-width: $sm-max) {
+            font-size: 13px;
+          }
+          @media only screen and (max-width: $xs-max) {
+            font-size: 12px;
+          }
+        }
+        .btn-zone {
+          text-align: center;
+          margin-top: 35px;
+          @keyframes pulse2 {
+            0% {
+              box-shadow: 0 0 0 0 $mainColor;
+            }
+            100% {
+              box-shadow: 0 0 0 2em rgba(#fff,0);
+            }
+          }
+          .btn-nft {
+            animation: pulse2 1s infinite;
+            animation-iteration-count: infinite;
+            font-weight: 600;
+            font-size: 14px;
+            &:hover {
+              animation: none;
+              border: 1px solid $mainColor;
+              background: rgba(0,0,0,.2);
+              & > span {
+                color: $mainColor;
+              }
+            }
+          }
+        }
+      }
+    }
     .block-intro-content {
       position: relative;
       z-index: 20;
