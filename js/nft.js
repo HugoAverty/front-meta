@@ -1,20 +1,6 @@
-/*
-$('.nft-carrousel').owlCarousel({
-    loop:true,
-    margin:10,
-    nav:true,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:3
-        },
-        1000:{
-            items:5
-        }
-    }
-})
-
-
- */
+gsap.registerPlugin(ScrollTrigger);
+gsap.to('progress', {
+    value: 100,
+    ease: 'none',
+    scrollTrigger: { scrub: 0.3 }
+});

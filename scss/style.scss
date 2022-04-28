@@ -335,14 +335,38 @@ footer {
         @media only screen and (max-width: $sm-max) {
           padding: 0;
         }
+        & > div {
+          position: relative;
+          & > .line-profil {
+            position: absolute;
+            z-index: 2;
+            bottom: -60px;
+            left: 37px;
+            &.line-profil-1 {
+              @include transform(rotate(-63deg));
+            }
+            &.line-profil-2 {
+              @include transform(rotate(196deg));
+            }
+          }
+          img {
+            position: relative;
+            z-index: 3;
+          }
+        }
       }
       .member-description {
         font-style: italic;
         font-size: 13px;
         line-height: 17px;
+        .member-text {
+          p {
+            margin: 0 0 10px;
+          }
+        }
         @media only screen and (max-width: $sm-max) {
           text-align: center;
-          .middle {
+          .member-text {
             padding-top: 0 !important;
           }
         }
@@ -510,12 +534,17 @@ footer {
         }
         .subtitle {
           text-align: center;
-          font-size: 15px;
+          font-size: 17px;
           font-weight: 300;
           line-height: 1.5;
           letter-spacing: 0.2px;
-          margin: 12px 0;
-          opacity: 1;
+          opacity: .95;
+          margin: 15px 0 0;
+          color: $mainColor;
+          &.big-subtitle {
+            font-weight: 600;
+            font-size: 22px;
+          }
           em {
             font-style: italic;
           }
