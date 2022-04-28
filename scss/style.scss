@@ -125,13 +125,12 @@ header {
 .menu {
   z-index: 11;
   position: fixed;
-  left: -150px;
+  left: -115px;
   top: 0;
   bottom: 0;
   margin: auto;
   height: 100px;
   transform: rotate(-90deg);
-  border-bottom: 1px dashed rgba(255,255,255, .25);
   .menu-list {
     width: 100%;
     .menu-active {
