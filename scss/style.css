@@ -1233,6 +1233,9 @@ footer {
         z-index: 2;
         bottom: -60px;
         left: 37px; }
+        @media only screen and (max-width: 64rem) {
+          .block.block-team .team-member .member-photo > div > .line-profil {
+            display: none; } }
         .block.block-team .team-member .member-photo > div > .line-profil.line-profil-1 {
           -webkit-transform: rotate(-63deg);
           -moz-transform: rotate(-63deg);
@@ -1607,7 +1610,7 @@ footer {
 .block.block-nft {
   padding: 75px 0; }
   .block.block-nft h2 {
-    font-size: 42px;
+    font-size: 54px;
     text-align: center;
     position: relative;
     margin-bottom: 65px;
@@ -1615,7 +1618,15 @@ footer {
     -webkit-transform: rotate(-5deg);
     -o-transform: rotate(-5deg);
     -ms-transform: rotate(-5deg);
-    transform: rotate(-5deg); }
+    transform: rotate(-5deg);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    color: transparent; }
+    @media only screen and (max-width: 64rem) {
+      .block.block-nft h2 {
+        font-size: 28px; } }
+    .block.block-nft h2 span {
+      color: white; }
     .block.block-nft h2:after {
       content: "";
       position: absolute;

@@ -13,7 +13,7 @@
   &.block-nft {
     padding: 75px 0;
     h2 {
-      font-size: 42px;
+      font-size: 54px;
       text-align: center;
       position: relative;
       margin-bottom: 65px;
@@ -22,6 +22,15 @@
       -o-transform: rotate(-5deg);
       -ms-transform: rotate(-5deg);
       transform: rotate(-5deg);
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: white;
+      color: transparent;
+      @media only screen and (max-width: $sm-max) {
+        font-size: 28px;
+      }
+      span {
+        color: white;
+      }
       &:after {
         content: "";
         position: absolute;
