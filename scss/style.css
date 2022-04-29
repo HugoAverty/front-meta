@@ -937,11 +937,11 @@ body {
   animation-iteration-count: infinite;
   font-weight: 600;
   font-size: 14px; }
-  .btn-nft:hover {
+  .btn-nft.btn-primary:hover {
     animation: none;
     border: 1px solid #AFFFFE;
     background: rgba(0, 0, 0, 0.2); }
-    .btn-nft:hover > span {
+    .btn-nft.btn-primary:hover > span {
       color: #AFFFFE; }
 
 .text-border {
@@ -1603,7 +1603,7 @@ footer {
   border: 1px solid rgba(255, 255, 255, 0.25);
   transform: skewX(-20deg);
   border-radius: 1px;
-  color: black;
+  color: #15172F;
   font-weight: 800; }
 
 .block.block-nft {
