@@ -927,6 +927,23 @@ body {
   background-color: #AFFFFE;
   border-radius: 10px; }
 
+@keyframes pulse2 {
+  0% {
+    box-shadow: 0 0 0 0 #AFFFFE; }
+  100% {
+    box-shadow: 0 0 0 2em rgba(255, 255, 255, 0); } }
+.btn-nft {
+  animation: pulse2 1s infinite;
+  animation-iteration-count: infinite;
+  font-weight: 600;
+  font-size: 14px; }
+  .btn-nft:hover {
+    animation: none;
+    border: 1px solid #AFFFFE;
+    background: rgba(0, 0, 0, 0.2); }
+    .btn-nft:hover > span {
+      color: #AFFFFE; }
+
 .text-border {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #fff;
@@ -1050,10 +1067,9 @@ header {
         top: -1px;
         left: -1px; }
     header .header-social .header-social_links {
-      padding: 15px;
-      opacity: .5; }
+      padding: 15px; }
       header .header-social .header-social_links:hover {
-        opacity: 1; }
+        opacity: .5; }
 
 .nft-html .menu {
   z-index: 100; }
@@ -1242,11 +1258,11 @@ footer {
           -o-transform: rotate(-63deg);
           transform: rotate(-63deg); }
         .block.block-team .team-member .member-photo > div > .line-profil.line-profil-2 {
-          -webkit-transform: rotate(196deg);
-          -moz-transform: rotate(196deg);
-          -ms-transform: rotate(196deg);
-          -o-transform: rotate(196deg);
-          transform: rotate(196deg); }
+          -webkit-transform: rotate(185deg);
+          -moz-transform: rotate(185deg);
+          -ms-transform: rotate(185deg);
+          -o-transform: rotate(185deg);
+          transform: rotate(185deg); }
       .block.block-team .team-member .member-photo > div img {
         position: relative;
         z-index: 3; }
@@ -1415,22 +1431,6 @@ footer {
         .block.block-intro.block-intro-nft .nft-content .btn-zone {
           text-align: center;
           margin-top: 35px; }
-@keyframes pulse2 {
-  0% {
-    box-shadow: 0 0 0 0 #AFFFFE; }
-  100% {
-    box-shadow: 0 0 0 2em rgba(255, 255, 255, 0); } }
-          .block.block-intro.block-intro-nft .nft-content .btn-zone .btn-nft {
-            animation: pulse2 1s infinite;
-            animation-iteration-count: infinite;
-            font-weight: 600;
-            font-size: 14px; }
-            .block.block-intro.block-intro-nft .nft-content .btn-zone .btn-nft:hover {
-              animation: none;
-              border: 1px solid #AFFFFE;
-              background: rgba(0, 0, 0, 0.2); }
-              .block.block-intro.block-intro-nft .nft-content .btn-zone .btn-nft:hover > span {
-                color: #AFFFFE; }
     .block.block-intro .block-intro-content {
       position: relative;
       z-index: 20; }
@@ -1753,11 +1753,14 @@ footer {
     .block.block-informations .informations-wrapper .txt-informations {
       padding: 0 50px; }
       .block.block-informations .informations-wrapper .txt-informations .information-title, .block.block-informations .informations-wrapper .txt-informations .subtext, .block.block-informations .informations-wrapper .txt-informations .subtitle {
-        text-align: left; }
+        text-align: left;
+        margin-top: 10px; }
         @media only screen and (max-width: 64rem) {
           .block.block-informations .informations-wrapper .txt-informations .information-title, .block.block-informations .informations-wrapper .txt-informations .subtext, .block.block-informations .informations-wrapper .txt-informations .subtitle {
             text-align: center;
             margin-bottom: 10px; } }
+        .block.block-informations .informations-wrapper .txt-informations .information-title .subtext, .block.block-informations .informations-wrapper .txt-informations .subtext .subtext, .block.block-informations .informations-wrapper .txt-informations .subtitle .subtext {
+          margin-top: 5px; }
         .block.block-informations .informations-wrapper .txt-informations .information-title.t-right, .block.block-informations .informations-wrapper .txt-informations .subtext.t-right, .block.block-informations .informations-wrapper .txt-informations .subtitle.t-right {
           text-align: right; }
           @media only screen and (max-width: 64rem) {
@@ -1765,7 +1768,7 @@ footer {
               text-align: center; } }
       .block.block-informations .informations-wrapper .txt-informations .information-title {
         font-size: 32px;
-        margin-top: 30px;
+        margin-top: 20px;
         font-family: "Roboto Condensed", sans-serif;
         color: #56EAFF; }
 .block.block-faq .accordion {

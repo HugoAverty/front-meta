@@ -110,9 +110,8 @@ header {
     }
     .header-social_links {
       padding: 15px;
-      opacity: .5;
       &:hover {
-        opacity: 1;
+        opacity: .5;
       }
     }
   }
@@ -348,7 +347,7 @@ footer {
               @include transform(rotate(-63deg));
             }
             &.line-profil-2 {
-              @include transform(rotate(196deg));
+              @include transform(rotate(185deg));
             }
           }
           img {
@@ -563,28 +562,6 @@ footer {
         .btn-zone {
           text-align: center;
           margin-top: 35px;
-          @keyframes pulse2 {
-            0% {
-              box-shadow: 0 0 0 0 $mainColor;
-            }
-            100% {
-              box-shadow: 0 0 0 2em rgba(#fff,0);
-            }
-          }
-          .btn-nft {
-            animation: pulse2 1s infinite;
-            animation-iteration-count: infinite;
-            font-weight: 600;
-            font-size: 14px;
-            &:hover {
-              animation: none;
-              border: 1px solid $mainColor;
-              background: rgba(0,0,0,.2);
-              & > span {
-                color: $mainColor;
-              }
-            }
-          }
         }
       }
     }
