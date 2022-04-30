@@ -1113,14 +1113,23 @@ header {
         margin: auto;
         left: 0;
         right: 0; }
+        @media only screen and (max-width: 64rem) {
+          .menu .menu-list .menu-item:after {
+            top: 0; } }
       .menu .menu-list .menu-item.activeMenu:after {
         opacity: 1;
         width: 65%; }
+        @media only screen and (max-width: 64rem) {
+          .menu .menu-list .menu-item.activeMenu:after {
+            width: 40%; } }
       .menu .menu-list .menu-item a {
         text-decoration: none;
         color: white;
         display: block;
         margin: 0 25px; }
+        @media only screen and (max-width: 64rem) {
+          .menu .menu-list .menu-item a {
+            text-align: center; } }
         .menu .menu-list .menu-item a .menu-number {
           opacity: .35;
           font-family: "Roboto Condensed", sans-serif; }

@@ -157,11 +157,17 @@ header {
         margin: auto;
         left: 0;
         right: 0;
+        @media only screen and (max-width: $sm-max) {
+          top: 0;
+        }
       }
       &.activeMenu {
         &:after {
           opacity: 1;
           width: 65%;
+          @media only screen and (max-width: $sm-max) {
+            width: 40%;
+          }
         }
       }
       a {
@@ -169,6 +175,9 @@ header {
         color: white;
         display: block;
         margin: 0 25px;
+        @media only screen and (max-width: $sm-max) {
+          text-align: center;
+        }
         .menu-number {
           opacity: .35;
           font-family: $condensedFont;
