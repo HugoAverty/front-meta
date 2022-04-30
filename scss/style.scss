@@ -145,6 +145,25 @@ header {
     }
     .menu-item {
       position: relative;
+      &:after {
+        @include transition(all .25s ease);
+        content: "";
+        position: absolute;
+        width: 0;
+        opacity: 0;
+        height: 3px;
+        background: $electriColor;
+        top: -14px;
+        margin: auto;
+        left: 0;
+        right: 0;
+      }
+      &.activeMenu {
+        &:after {
+          opacity: 1;
+          width: 65%;
+        }
+      }
       a {
         text-decoration: none;
         color: white;
