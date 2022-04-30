@@ -1097,6 +1097,13 @@ header {
       box-shadow: 0 2px 9px 8px rgba(90, 177, 255, 0.5); }
     .menu .menu-list .menu-item {
       position: relative; }
+      @media only screen and (max-width: 64rem) {
+        .menu .menu-list .menu-item.elt-nft {
+          order: 1; }
+        .menu .menu-list .menu-item.elt-faq {
+          order: 2; }
+        .menu .menu-list .menu-item.elt-team {
+          order: 3; } }
       .menu .menu-list .menu-item:after {
         -webkit-transition: all 0.25s ease;
         -moz-transition: all 0.25s ease;

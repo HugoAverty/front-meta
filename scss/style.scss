@@ -145,6 +145,17 @@ header {
     }
     .menu-item {
       position: relative;
+      @media only screen and (max-width: $sm-max) {
+        &.elt-nft {
+          order: 1;
+        }
+        &.elt-faq {
+          order: 2;
+        }
+        &.elt-team {
+          order: 3;
+        }
+      }
       &:after {
         @include transition(all .25s ease);
         content: "";
