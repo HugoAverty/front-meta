@@ -186,6 +186,14 @@ header {
             width: 40%;
           }
         }
+        a {
+          .menu-number {
+            opacity: .75;
+          }
+          .menu-label {
+            opacity: 1;
+          }
+        }
       }
       a {
         text-decoration: none;
@@ -196,12 +204,16 @@ header {
           text-align: center;
         }
         .menu-number {
-          opacity: 0.35;
+          opacity: .35;
+          color: $electriColor;
           font-family: $condensedFont;
+          @include transition(all 0.25s ease);
         }
         .menu-label {
           text-transform: uppercase;
           font-weight: bold;
+          opacity: .65;
+          @include transition(all 0.25s ease);
         }
       }
     }
@@ -217,16 +229,8 @@ header {
     transform: rotate(0);
     width: 100%;
     .menu-list {
-      .menu-active {
-      }
       .menu-item {
         width: 33%;
-        a {
-          .menu-number {
-          }
-          .menu-label {
-          }
-        }
       }
     }
   }
@@ -524,22 +528,27 @@ footer {
     background: url(../img/bg-home.png) no-repeat bottom center;
     background-size: cover;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     z-index: 20;
     position: relative;
     &.block-intro-nft {
       background: none;
       position: relative;
-      overflow: hidden;
-      .bg-block-intro-nft {
-        content: "";
+      .bg-block-intro-nft-wrapper {
         position: absolute;
         z-index: 1;
         width: 100%;
         height: 100%;
-        background: url(../img/bg-services.jpg) no-repeat bottom center;
-        opacity: 0.3;
-        background-size: cover;
+        overflow: hidden;
+        .bg-block-intro-nft {
+          position: absolute;
+          z-index: 1;
+          width: 100%;
+          height: 100%;
+          background: url(../img/bg-services.jpg) no-repeat bottom center;
+          opacity: 0.3;
+          background-size: cover;
+        }
       }
       &:before {
         content: "";
