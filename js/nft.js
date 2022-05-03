@@ -11,18 +11,28 @@ const elTeam = document.querySelector('#elt-team')
 const observer = new window.IntersectionObserver(([entry]) => {
     var menu = document.querySelector('.'+entry.target.id);
     if (entry.isIntersecting) {
-        console.log('ENTER')
-        console.log(entry.target.id);
+        const menuItems = document.querySelectorAll('.menu-item');
+        menuItems.forEach(item => {
+            item.classList.remove('activeMenu');
+        });
         menu.classList.toggle('activeMenu');
         return
     }
     menu.classList.remove('activeMenu');
-    console.log('LEAVE')
 }, {
     root: null,
-    threshold: 0.1, // set offset 0.1 means trigger if atleast 10% of element in viewport
+    threshold: 0.0001, // set offset 0.1 means trigger if atleast 10% of element
+    // in viewport
 });
 
 observer.observe(elTeam);
 observer.observe(elFAQ);
 observer.observe(eltNFT);
+
+
+var menuItem = document.querySelectorAll(".menu-item");
+for (const item of menuItem) {
+    item.addEventListener('click', function(event) {
+        this.classList.add("activeMenu");
+    })
+}

@@ -55,6 +55,7 @@
         .nft-image {
           position: relative;
           @include transition(all .25s ease);
+          width: 85%;
           &:hover {
             @include transform(rotate(-3deg) scale(1.1));
             .character {
@@ -68,7 +69,7 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            top: -27px;
+            top: -24px;
             left: -20px;
             transform: rotate(-5deg);
             .character-img {
@@ -108,11 +109,11 @@
   &.block-informations {
     padding-top: 50px;
     .informations-wrapper {
-      margin-bottom: 75px;
+      margin-bottom: 25px;
       .img-informations {
         @include transform(rotate(0deg) skewX(-15deg));
         border-radius: 5px;
-        min-height: 180px;
+        min-height: 250px;
         padding: 0;
         overflow: hidden;
         border: 10px solid rgba(255,255,255,.2);
@@ -159,7 +160,7 @@
         }
         .information-title {
           font-size: 32px;
-          margin-top: 20px;
+          margin-top: 55px;
           font-family: $condensedFont;
           color: $electriColor;
           @media only screen and (max-width: $sm-max) {
