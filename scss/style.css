@@ -1035,13 +1035,18 @@ header {
     header .header-logo.header-logo-small {
       display: none; }
     @media only screen and (max-width: 40rem) {
-      header .header-logo.header-logo-small {
-        display: block; }
-      header .header-logo.header-logo-big {
-        display: none; } }
+      header .header-logo {
+        padding: 10px; }
+        header .header-logo.header-logo-small {
+          display: block; }
+        header .header-logo.header-logo-big {
+          display: none; } }
   header .header-social {
     text-align: right;
     padding: 30px; }
+    @media only screen and (max-width: 40rem) {
+      header .header-social {
+        padding: 10px; } }
     header .header-social li {
       list-style: none;
       display: inline; }
@@ -1448,7 +1453,8 @@ footer {
           @media only screen and (max-width: 40rem) {
             .block.block-intro.block-intro-nft .nft-content h1 {
               font-size: 28px;
-              letter-spacing: -1px; } }
+              letter-spacing: -1px;
+              padding-top: 110px; } }
         .block.block-intro.block-intro-nft .nft-content .subtitle {
           text-align: center;
           font-size: 17px;
@@ -1681,6 +1687,10 @@ footer {
   .block.block-nft .nft-carrousel .nft-elt {
     position: relative;
     margin-bottom: 65px; }
+    @media only screen and (max-width: 40rem) {
+      .block.block-nft .nft-carrousel .nft-elt {
+        padding: 0 50px;
+        margin-bottom: 50px; } }
     .block.block-nft .nft-carrousel .nft-elt .nft-image {
       position: relative;
       -webkit-transition: all 0.25s ease;

@@ -63,6 +63,7 @@ header {
       display: none;
     }
     @media only screen and (max-width: $xs-max) {
+      padding: 10px;
       &.header-logo-small {
         display: block;
       }
@@ -74,6 +75,9 @@ header {
   .header-social {
     text-align: right;
     padding: 30px;
+    @media only screen and (max-width: $xs-max) {
+      padding: 10px;
+    }
     li {
       list-style: none;
       display: inline;
@@ -570,6 +574,7 @@ footer {
           @media only screen and (max-width: $xs-max) {
             font-size: 28px;
             letter-spacing: -1px;
+            padding-top: 110px;
           }
         }
         .subtitle {
