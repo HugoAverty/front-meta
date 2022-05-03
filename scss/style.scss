@@ -168,11 +168,12 @@ header {
         width: 0;
         opacity: 0;
         height: 3px;
-        background: $electriColor;
+        background: white;
         top: -14px;
         margin: auto;
         left: 0;
         right: 0;
+        box-shadow: 0px 0px 50px 5px $electriColor, 0px 0px 10px 2px $electriColor;
         @media only screen and (max-width: $sm-max) {
           top: 0;
         }
@@ -527,7 +528,8 @@ footer {
     &.block-intro-nft {
       background: none;
       position: relative;
-      &:after {
+      overflow: hidden;
+      .bg-block-intro-nft {
         content: "";
         position: absolute;
         z-index: 1;

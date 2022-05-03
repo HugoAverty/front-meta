@@ -5,6 +5,8 @@ gsap.to('progress', {
     scrollTrigger: { scrub: 0.3 }
 });
 
+
+
 const eltNFT = document.querySelector('#elt-nft')
 const elFAQ = document.querySelector('#elt-faq')
 const elTeam = document.querySelector('#elt-team')
@@ -25,14 +27,18 @@ const observer = new window.IntersectionObserver(([entry]) => {
     // in viewport
 });
 
-observer.observe(elTeam);
-observer.observe(elFAQ);
-observer.observe(eltNFT);
-
-
 var menuItem = document.querySelectorAll(".menu-item");
 for (const item of menuItem) {
     item.addEventListener('click', function(event) {
         this.classList.add("activeMenu");
     })
+}
+
+window.onload = function() {
+    var tlIntro = new TimelineMax();
+    tlIntro.to(".block.block-intro.block-intro-nft .bg-block-intro-nft", 30, {scale: 1.4}, 0);
+
+    observer.observe(elTeam);
+    observer.observe(elFAQ);
+    observer.observe(eltNFT);
 }

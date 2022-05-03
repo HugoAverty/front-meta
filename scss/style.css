@@ -1129,11 +1129,12 @@ header {
         width: 0;
         opacity: 0;
         height: 3px;
-        background: #56eaff;
+        background: white;
         top: -14px;
         margin: auto;
         left: 0;
-        right: 0; }
+        right: 0;
+        box-shadow: 0px 0px 50px 5px #56eaff, 0px 0px 10px 2px #56eaff; }
         @media only screen and (max-width: 64rem) {
           .menu .menu-list .menu-item:after {
             top: 0; } }
@@ -1412,8 +1413,9 @@ footer {
     position: relative; }
     .block.block-intro.block-intro-nft {
       background: none;
-      position: relative; }
-      .block.block-intro.block-intro-nft:after {
+      position: relative;
+      overflow: hidden; }
+      .block.block-intro.block-intro-nft .bg-block-intro-nft {
         content: "";
         position: absolute;
         z-index: 1;
