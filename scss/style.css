@@ -1312,7 +1312,7 @@ footer {
     font-size: 13px;
     line-height: 17px; }
     .block.block-team .team-member .member-description .member-text p {
-      margin: 0 0 10px; }
+      margin: 0 0 5px; }
     @media only screen and (max-width: 64rem) {
       .block.block-team .team-member .member-description {
         text-align: center; }
