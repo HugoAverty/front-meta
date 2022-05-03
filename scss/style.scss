@@ -233,7 +233,7 @@ header {
 }
 
 .bg-pattern {
-  z-index: 3;
+  z-index: 100;
   position: fixed;
   height: 100%;
   width: 100%;
@@ -241,9 +241,11 @@ header {
   left: 0;
   background: url(../img/bg-pattern.png) repeat;
   opacity: 0.25;
+  pointer-events: none;
 }
 .bg-blurry {
-  z-index: 3;
+  z-index: 100;
+  pointer-events: none;
   position: fixed;
   height: 2500px;
   width: 100%;
@@ -251,7 +253,7 @@ header {
   left: 0;
   background: url(../img/bg-blurry.png) top center no-repeat;
   background-size: cover;
-  opacity: 0.35;
+  opacity: 0.2;
 }
 
 
@@ -604,6 +606,7 @@ footer {
     .block-intro-content {
       position: relative;
       z-index: 20;
+      padding-top: 35px;
     }
     h1 {
       margin: 0;

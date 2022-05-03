@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="384px" height="339px" viewBox="0 0 384 339" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Box</title>
+    <defs>
+        <linearGradient x1="112.915615%" y1="17.9362119%" x2="-12.9156145%" y2="82.0637881%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#A4FFA5" stop-opacity="0.862762238" offset="27.4366259%"></stop>
+            <stop stop-color="#B4FFAC" stop-opacity="0.702473881" offset="52.0159528%"></stop>
+            <stop stop-color="#CEFFBE" stop-opacity="0.373798077" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-2" points="65.4701135 29.9873327 383.106695 6.24229214e-15 317.636582 308.012667 -1.05545517e-14 338"></polygon>
+        <filter x="-0.1%" y="-0.1%" width="100.3%" height="100.3%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="-1" dy="1" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.764668925 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="112.915615%" y1="17.9362119%" x2="-12.9156145%" y2="82.0637881%" id="linearGradient-4">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#D4FFD4" stop-opacity="0.862762238" offset="28.6030376%"></stop>
+            <stop stop-color="#C7FFC2" stop-opacity="0.702473881" offset="60.5496066%"></stop>
+            <stop stop-color="#CEFFBE" stop-opacity="0.373798077" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-5" points="74.7715529 40.242605 368.975381 12.4675043 308.335142 297.757395 14.1313147 325.532496"></polygon>
+        <filter x="-0.1%" y="-0.2%" width="100.3%" height="100.3%" filterUnits="objectBoundingBox" id="filter-6">
+            <feOffset dx="-1" dy="1" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.764668925 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Metadventu.re-LP" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Metadventure" transform="translate(-70.000000, -960.000000)">
+            <g id="Box" transform="translate(70.894848, 960.615481)">
+                <g id="Box-Border" opacity="0.217866443">
+                    <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                </g>
+                <g id="Box-color">
+                    <use fill="url(#linearGradient-4)" fill-rule="evenodd" xlink:href="#path-5"></use>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

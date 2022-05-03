@@ -36,7 +36,7 @@ for (const item of menuItem) {
 
 window.onload = function() {
     var tlIntro = new TimelineMax();
-    tlIntro.to(".block.block-intro.block-intro-nft .bg-block-intro-nft", 30, {scale: 1.4}, 0);
+    tlIntro.to(".block.block-intro.block-intro-nft .bg-block-intro-nft", 30, {scale: 1.3}, 0);
 
     observer.observe(elTeam);
     observer.observe(elFAQ);
