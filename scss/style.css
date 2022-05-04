@@ -1704,7 +1704,7 @@ footer {
       margin: auto;
       width: 145px;
       height: 10px;
-      background-image: linear-gradient(225deg, #FFD109 0%, #B954FF 100%); }
+      background-image: linear-gradient(90deg, #f56772, #ba6bff); }
       @media only screen and (max-width: 64rem) {
         .block.block-nft h2:after {
           display: none; } }
@@ -1836,18 +1836,49 @@ footer {
           .block.block-informations .informations-wrapper .txt-informations .information-title, .block.block-informations .informations-wrapper .txt-informations .subtext, .block.block-informations .informations-wrapper .txt-informations .subtitle {
             text-align: center;
             margin-bottom: 10px; } }
-        .block.block-informations .informations-wrapper .txt-informations .information-title .subtext, .block.block-informations .informations-wrapper .txt-informations .subtext .subtext, .block.block-informations .informations-wrapper .txt-informations .subtitle .subtext {
-          margin-top: 5px; }
         .block.block-informations .informations-wrapper .txt-informations .information-title.t-right, .block.block-informations .informations-wrapper .txt-informations .subtext.t-right, .block.block-informations .informations-wrapper .txt-informations .subtitle.t-right {
           text-align: right; }
           @media only screen and (max-width: 64rem) {
             .block.block-informations .informations-wrapper .txt-informations .information-title.t-right, .block.block-informations .informations-wrapper .txt-informations .subtext.t-right, .block.block-informations .informations-wrapper .txt-informations .subtitle.t-right {
               text-align: center; } }
+          .block.block-informations .informations-wrapper .txt-informations .information-title.t-right.information-title, .block.block-informations .informations-wrapper .txt-informations .subtext.t-right.information-title, .block.block-informations .informations-wrapper .txt-informations .subtitle.t-right.information-title {
+            padding: 0; }
+          .block.block-informations .informations-wrapper .txt-informations .information-title.t-right.subtext, .block.block-informations .informations-wrapper .txt-informations .subtext.t-right.subtext, .block.block-informations .informations-wrapper .txt-informations .subtitle.t-right.subtext {
+            margin-top: 5px;
+            padding: 0 15px; }
+            @media only screen and (max-width: 64rem) {
+              .block.block-informations .informations-wrapper .txt-informations .information-title.t-right.subtext, .block.block-informations .informations-wrapper .txt-informations .subtext.t-right.subtext, .block.block-informations .informations-wrapper .txt-informations .subtitle.t-right.subtext {
+                padding: 0; } }
+          .block.block-informations .informations-wrapper .txt-informations .information-title.t-right.subtitle, .block.block-informations .informations-wrapper .txt-informations .subtext.t-right.subtitle, .block.block-informations .informations-wrapper .txt-informations .subtitle.t-right.subtitle {
+            padding: 0 30px; }
+            @media only screen and (max-width: 64rem) {
+              .block.block-informations .informations-wrapper .txt-informations .information-title.t-right.subtitle, .block.block-informations .informations-wrapper .txt-informations .subtext.t-right.subtitle, .block.block-informations .informations-wrapper .txt-informations .subtitle.t-right.subtitle {
+                padding: 0; } }
+      .block.block-informations .informations-wrapper .txt-informations .information-title {
+        padding: 0 30px; }
+        @media only screen and (max-width: 64rem) {
+          .block.block-informations .informations-wrapper .txt-informations .information-title {
+            padding: 0; } }
+      .block.block-informations .informations-wrapper .txt-informations .subtext {
+        padding: 0 15px;
+        font-family: "Roboto Condensed", sans-serif; }
+        @media only screen and (max-width: 64rem) {
+          .block.block-informations .informations-wrapper .txt-informations .subtext {
+            padding: 0; } }
+      .block.block-informations .informations-wrapper .txt-informations .subtitle {
+        padding: 0; }
       .block.block-informations .informations-wrapper .txt-informations .information-title {
         font-size: 32px;
         margin-top: 55px;
-        font-family: "Roboto Condensed", sans-serif;
         color: #56eaff; }
+        .block.block-informations .informations-wrapper .txt-informations .information-title > span {
+          font-weight: 800;
+          background-image: linear-gradient(90deg, #f56772, #ba6bff);
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          -webkit-box-decoration-break: clone;
+          box-decoration-break: clone; }
 .block.block-faq .accordion {
   transform: translateZ(0); }
   .block.block-faq .accordion > .accordion-toggle {
