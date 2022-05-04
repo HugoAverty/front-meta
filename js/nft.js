@@ -34,6 +34,23 @@ for (const item of menuItem) {
     })
 }
 
+gsap.to(".bg-blurry", {
+    scrollTrigger: {
+        scrub: true
+    },
+    y: 3000,
+    ease: "ease"
+});
+
+gsap.to(".bg-pattern", {
+    scrollTrigger: {
+        scrub: true
+    },
+    y: 2400,
+    ease: "ease"
+});
+
+
 window.onload = function() {
     var tlIntro = new TimelineMax();
     tlIntro.to(".block.block-intro.block-intro-nft .bg-block-intro-nft", 30, {scale: 1.3}, 0);

@@ -1188,28 +1188,36 @@ header {
       .menu .menu-list .menu-item {
         width: 33%; } }
 
-.bg-pattern {
+.bg-wrapper {
+  position: absolute;
   z-index: 100;
-  position: fixed;
   height: 100%;
   width: 100%;
   top: 0;
   left: 0;
-  background: url(../img/bg-pattern.png) repeat;
-  opacity: 0.25;
+  overflow: hidden;
   pointer-events: none; }
-
-.bg-blurry {
-  z-index: 100;
-  pointer-events: none;
-  position: fixed;
-  height: 2500px;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background: url(../img/bg-blurry.png) top center no-repeat;
-  background-size: cover;
-  opacity: 0.2; }
+  .bg-wrapper .bg-pattern {
+    z-index: 100;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: url(../img/bg-pattern.png) repeat;
+    opacity: 0.3;
+    pointer-events: none; }
+  .bg-wrapper .bg-blurry {
+    z-index: 101;
+    pointer-events: none;
+    position: absolute;
+    height: 2500px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: url(../img/bg-blurry.png) top center no-repeat;
+    background-size: cover;
+    opacity: 0.25; }
 
 footer {
   background: url(../img/bg-footer.png) no-repeat top center;
@@ -1265,7 +1273,7 @@ footer {
         width: 75px;
         border-radius: 4px;
         height: 4px;
-        background-image: linear-gradient(225deg, #ffd109 0%, #b954ff 100%); }
+        background-image: linear-gradient(90deg, #f56772, #ba6bff); }
     .block.block-reinforcement .reinforcement-text {
       color: #affffe;
       opacity: 0.8;
@@ -1790,11 +1798,11 @@ footer {
       -ms-transform: rotate(0deg) skewX(-15deg);
       -o-transform: rotate(0deg) skewX(-15deg);
       transform: rotate(0deg) skewX(-15deg);
-      border-radius: 5px;
+      border-radius: 25px;
       min-height: 250px;
       padding: 0;
       overflow: hidden;
-      border: 10px solid rgba(255, 255, 255, 0.2); }
+      border: 10px solid #2d2a54; }
       @media only screen and (max-width: 64rem) {
         .block.block-informations .informations-wrapper .img-informations {
           -webkit-transform: rotate(0deg) skewX(0);
@@ -1808,11 +1816,11 @@ footer {
       .block.block-informations .informations-wrapper .img-informations > div {
         width: 120%;
         height: 110%;
-        -webkit-transform: translateX(-25px) skewX(15deg);
-        -moz-transform: translateX(-25px) skewX(15deg);
-        -ms-transform: translateX(-25px) skewX(15deg);
-        -o-transform: translateX(-25px) skewX(15deg);
-        transform: translateX(-25px) skewX(15deg);
+        -webkit-transform: translateX(-30px) skewX(15deg);
+        -moz-transform: translateX(-30px) skewX(15deg);
+        -ms-transform: translateX(-30px) skewX(15deg);
+        -o-transform: translateX(-30px) skewX(15deg);
+        transform: translateX(-30px) skewX(15deg);
         background: url("http://placekitten.com/192/108") center center;
         background-size: cover; }
         @media only screen and (max-width: 64rem) {
@@ -1885,12 +1893,19 @@ footer {
     position: absolute;
     opacity: 0;
     display: none; }
-    .block.block-faq .accordion > .accordion-toggle:checked ~ label .arrow-down {
-      -webkit-transform: rotate(180deg);
-      -moz-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-      -o-transform: rotate(180deg);
-      transform: rotate(180deg); }
+    .block.block-faq .accordion > .accordion-toggle:checked ~ label {
+      background-image: linear-gradient(90deg, #f56772, #ba6bff);
+      padding-left: 20px;
+      text-shadow: none;
+      color: white; }
+      .block.block-faq .accordion > .accordion-toggle:checked ~ label:after {
+        display: none; }
+      .block.block-faq .accordion > .accordion-toggle:checked ~ label .arrow-down {
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg); }
     .block.block-faq .accordion > .accordion-toggle:checked ~ section {
       height: auto;
       padding: 40px 20px;
@@ -1936,8 +1951,8 @@ footer {
       transition: all 0.25s ease; }
     .block.block-faq .accordion > label:hover {
       padding-left: 30px;
-      background: rgba(255, 255, 255, 0.2);
-      border: 1px solid rgba(255, 255, 255, 0.25);
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.2);
       text-shadow: 0px 0px 11px #56eaff, 0px 0px 3px #56eaff; }
       .block.block-faq .accordion > label:hover:after {
         width: 4px; }

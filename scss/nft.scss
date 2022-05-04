@@ -40,7 +40,7 @@
         margin: auto;
         width: 145px;;
         height: 10px;
-        background-image: linear-gradient(90deg,#f56772,#ba6bff);
+        background-image: $gradient;
         @media only screen and (max-width: $sm-max) {
           display: none;
         }
@@ -115,11 +115,11 @@
       margin-bottom: 25px;
       .img-informations {
         @include transform(rotate(0deg) skewX(-15deg));
-        border-radius: 5px;
+        border-radius: 25px;
         min-height: 250px;
         padding: 0;
         overflow: hidden;
-        border: 10px solid rgba(255,255,255,.2);
+        border: 10px solid rgb(45, 42, 84);
         @media only screen and (max-width: $sm-max) {
           @include transform(rotate(0deg) skewX(0));
           width: 320px;
@@ -129,7 +129,7 @@
         & > div {
           width: 120%;
           height: 110%;
-          @include transform(translateX(-25px) skewX(15deg));
+          @include transform(translateX(-30px) skewX(15deg));
           background: url("http://placekitten.com/192/108") center center;
           background-size: cover;
           @media only screen and (max-width: $sm-max) {
@@ -196,7 +196,7 @@
           color: $electriColor;
           & > span {
             font-weight: 800;
-            background-image: linear-gradient(90deg,#f56772,#ba6bff);
+            background-image: $gradient;
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -217,8 +217,17 @@
         position: absolute;
         opacity: 0;
         display: none;
-        &:checked ~ label .arrow-down {
-          @include transform(rotate(180deg))
+        &:checked ~ label {
+          background-image: $gradient;
+          padding-left: 20px;
+          text-shadow: none;
+          color: $labelColor;
+          &:after {
+            display: none;
+          }
+          .arrow-down {
+            @include transform(rotate(180deg))
+          }
         }
         &:checked ~ section{
           height: auto;
@@ -260,8 +269,8 @@
         }
         &:hover {
           padding-left: 30px;
-          background: rgba(255, 255, 255, 0.2);
-          border: 1px solid rgba(255,255,255,.25);
+          background: rgba(255, 255, 255, 0.15);
+          border: 1px solid rgba(255,255,255,.2);
           text-shadow: 0px 0px 11px $electriColor, 0px 0px 3px $electriColor;
           &:after {
             width: 4px;
