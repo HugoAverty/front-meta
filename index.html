@@ -28,6 +28,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+  <!-- PostHog script -->
+  <script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('#PH_API_KEY#',{api_host:'https://ph.workadventu.re'})
+  </script>
+  
 </head>
 
 <body>
@@ -46,20 +52,17 @@
       <div class="col-xs-8 col-sm-6">
         <ul class="header-social">
           <li>
-            <a href="https://twitter.com/Metadventure_" target="_blank"
-               class="header-social_links">
+            <a href="https://twitter.com/Metadventure_" target="_blank" ph-id="join_twitter" class="header-social_links">
               <img src="img/social/013-twitter-1.svg" alt="Icon Twitter" style="transform: translateY(-5px);">
             </a>
           </li>
           <li>
-            <a href="https://discord.gg/DqUkUwA88d" target="_blank"
-               class="header-social_links">
+            <a href="https://discord.gg/DqUkUwA88d" target="_blank" ph-id="join_discord" class="header-social_links">
               <img src="img/social/discord.svg" alt="Icon Discord" style="transform: translateY(-3px);">
             </a>
           </li>
           <li>
-            <a href="https://github.com/thecodingmachine/workadventure" target="_blank"
-               class="header-social_links">
+            <a href="https://github.com/thecodingmachine/workadventure" target="_blank" ph-id="join_github" class="header-social_links">
               <img src="img/social/github.svg" alt="Icon GitHub" />
             </a>
           </li>
@@ -70,7 +73,7 @@
   <nav class="menu">
     <div class="menu-list row">
       <div class="menu-item col-xs-4 elt-team">
-        <a href="#team">
+        <a href="#team" ph-id="menu_team">
           <div class="menu-number nav-item nav-item-3">.03</div>
           <div class="menu-label nav-item nav-item-3">
             Team
@@ -78,7 +81,7 @@
         </a>
       </div>
       <div class="menu-item col-xs-4 elt-faq">
-        <a href="#faq">
+        <a href="#faq" ph-id="menu_faq">
           <div class="menu-number nav-item nav-item-2">.02</div>
           <div class="menu-label nav-item nav-item-2">
             FAQ
@@ -86,7 +89,7 @@
         </a>
       </div>
       <div class="menu-item col-xs-4 elt-nft">
-        <a href="#nft" class="nav-item-1">
+        <a href="#nft" class="nav-item-1" ph-id="menu_nft">
           <div class="menu-number nav-item nav-item-1">.01</div>
           <div class="menu-label nav-item nav-item-1">
             NFT<span class="lower">s</span>
@@ -134,7 +137,7 @@
                 <strong>Fasten your seatbelts Adventurers 🚀</strong>
               </p>
               <div class="btn-zone">
-                <a href="https://play.staging.workadventu.re/@/metaventure/land/portal" target="_blank" class="btn btn-primary btn-nft">
+                <a href="https://play.staging.workadventu.re/@/metaventure/land/portal" target="_blank" class="btn btn-primary btn-nft" ph-id="go_to_metadventure">
                   <span>Portal</span>
                 </a>
               </div>
@@ -250,14 +253,12 @@
           </div>
         </div>
         <div class="btn-zone">
-          <a href="https://discord.gg/DqUkUwA88d" class="follow-us"
-             target="_blank">
+          <a href="https://discord.gg/DqUkUwA88d" target="_blank" class="follow-us" ph-id="join_discord">
             <img src="img/social/discord.svg"
                  alt="Icon Discord" />
             Join us on Discord
           </a>
-          <a href="https://twitter.com/Metadventure_"
-             target="_blank" class="follow-us">
+          <a href="https://twitter.com/Metadventure_" target="_blank" class="follow-us" ph-id="join_twitter">
             <img src="img/social/013-twitter-1.svg"
                  alt="Icon Twitter" />
             Follow us on Twitter
@@ -275,8 +276,8 @@
         </div>
         <div class="col-xs-12">
           <div class="accordion">
-            <input id="toggle1" type="radio" class="accordion-toggle" name="toggle" />
-            <label for="toggle1">What is Woka Gen1
+            <input id="toggle1" type="radio" class="accordion-toggle" name="toggle"/>
+            <label for="toggle1" ph-id="faq_what_is_gen1">What is Woka Gen1
               <img src="img/arrow-down.svg" class="arrow-down" />
             </label>
             <section>
@@ -290,8 +291,8 @@
           </div>
 
           <div class="accordion">
-            <input id="toggle2" type="radio" class="accordion-toggle" name="toggle" />
-            <label for="toggle2">What will this collection be used for?
+            <input id="toggle2" type="radio" class="accordion-toggle" name="toggle"/>
+            <label for="toggle2" ph-id="faq_collection">What will this collection be used for?
               <img src="img/arrow-down.svg" class="arrow-down" />
             </label>
             <section>
@@ -311,8 +312,8 @@
           </div>
 
           <div class="accordion">
-            <input id="toggle3" type="radio" class="accordion-toggle" name="toggle" />
-            <label for="toggle3">How many Woka will be created in this Gen1 and at which price?
+            <input id="toggle3" type="radio" class="accordion-toggle" name="toggle"/>
+            <label for="toggle3" ph-id="faq_how_many_woka">How many Woka will be created in this Gen1 and at which price?
               <img src="img/arrow-down.svg" class="arrow-down" />
             </label>
             <section>
@@ -329,9 +330,8 @@
           </div>
 
           <div class="accordion">
-            <input id="toggle4" type="radio" class="accordion-toggle"
-                   name="toggle" />
-            <label for="toggle4">What is the release date?
+            <input id="toggle4" type="radio" class="accordion-toggle" name="toggle"/>
+            <label for="toggle4" ph-id="faq_release_date">What is the release date?
               <img src="img/arrow-down.svg" class="arrow-down" />
             </label>
             <section>
@@ -342,9 +342,8 @@
           </div>
 
           <div class="accordion">
-            <input id="toggle5" type="radio" class="accordion-toggle"
-                   name="toggle" />
-            <label for="toggle5">Which wallets will be available for minting?
+            <input id="toggle5" type="radio" class="accordion-toggle" name="toggle"/>
+            <label for="toggle5" ph-id="faq_available">Which wallets will be available for minting?
               <img src="img/arrow-down.svg" class="arrow-down" />
             </label>
             <section>
@@ -356,9 +355,8 @@
           </div>
 
           <div class="accordion">
-            <input id="toggle6" type="radio" class="accordion-toggle"
-                   name="toggle" />
-            <label for="toggle6">Will there be some sort of rarity?
+            <input id="toggle6" type="radio" class="accordion-toggle" name="toggle"/>
+            <label for="toggle6" ph-id="faq_rarity">Will there be some sort of rarity?
               <img src="img/arrow-down.svg" class="arrow-down" />
             </label>
             <section>
@@ -369,9 +367,8 @@
           </div>
 
           <div class="accordion">
-            <input id="toggle7" type="radio" class="accordion-toggle"
-                   name="toggle" />
-            <label for="toggle7">How the metaverse for Gen1 owners will be built?
+            <input id="toggle7" type="radio" class="accordion-toggle" name="toggle"/>
+            <label for="toggle7" ph-id="faq_build">How the metaverse for Gen1 owners will be built?
               <img src="img/arrow-down.svg" class="arrow-down" />
             </label>
             <section>
@@ -391,9 +388,8 @@
           </div>
 
           <div class="accordion">
-            <input id="toggle8" type="radio" class="accordion-toggle"
-                   name="toggle" />
-            <label for="toggle8">What about Metadventure?
+            <input id="toggle8" type="radio" class="accordion-toggle" name="toggle"/>
+            <label for="toggle8" ph-id="faq_metadventure">What about Metadventure?
               <img src="img/arrow-down.svg" class="arrow-down" />
             </label>
             <section>
@@ -410,14 +406,12 @@
           </div>
         </div>
         <div class="btn-zone">
-          <a href="https://discord.gg/DqUkUwA88d" class="follow-us"
-             target="_blank">
+          <a href="https://discord.gg/DqUkUwA88d" target="_blank" class="follow-us" ph-id="join_discord">
             <img src="img/social/discord.svg"
                  alt="Icon Discord" />
             Join us on Discord
           </a>
-          <a href="https://twitter.com/Metadventure_"
-             target="_blank" class="follow-us">
+          <a href="https://twitter.com/Metadventure_" target="_blank" class="follow-us" ph-id="join_twitter">
             <img src="img/social/013-twitter-1.svg"
                  alt="Icon Twitter" />
             Follow us on Twitter
@@ -495,7 +489,7 @@
         <div class="row">
           <div class="col-xs-12">
             <div class="btn-zone">
-              <a href="https://play.staging.workadventu.re/@/metaventure/land/portal" target="_blank" class="btn btn-primary btn-nft">
+              <a href="https://play.staging.workadventu.re/@/metaventure/land/portal" target="_blank" class="btn btn-primary btn-nft" ph-id="go_to_metadventure">
                 <span>Portal</span>
               </a>
             </div>
