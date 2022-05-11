@@ -2214,6 +2214,11 @@ footer .footer-logo {
   -o-transform: rotate(5deg);
   transform: rotate(5deg);
 }
+.block.block-nft .nft-carrousel .nft-elt .nft-image .character canvas.character-img{
+  height: 100%;
+  left: 10%;
+  top: 5%;
+}
 .block.block-nft .nft-carrousel .nft-elt .nft-image .background-nft {
   width: 100%;
 }
