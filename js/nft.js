@@ -82,9 +82,9 @@ elFAQ.querySelectorAll("label").forEach((item) => {
 
 const animatedTextures = [];
 
-function wokaCard(id){
+function wokaCard(id) {
     //cancel animation WOKA
-    if(animatedTextures[id] != undefined){
+    if (animatedTextures[id] != undefined) {
         window.cancelAnimationFrame(animatedTextures[id].requestAnimationFrame);
     }
 
@@ -100,9 +100,9 @@ function wokaCard(id){
         currentLoopIndex: 0,
         frameCount: 0,
         currentDirection: 0,
-        scale: 2,
-        width: 32,
-        height: 32,
+        scale: 1,
+        width: 512,
+        height: 512,
         requestAnimationFrame: null,
     };
     animatedTexture.context.imageSmoothingEnabled = false;
@@ -123,7 +123,7 @@ const stepAnimatedTexture = (id) => {
     animatedTexture.frameCount++;
     if (animatedTexture.frameCount < 35) {
         animatedTexture.requestAnimationFrame = window.requestAnimationFrame(() => {
-            stepAnimatedTexture(id); 
+            stepAnimatedTexture(id);
         });
         return;
     }
@@ -158,7 +158,7 @@ const stepAnimatedTexture = (id) => {
     });
 }
 
-const  animatedTextureDrawFrame = (id, frameX, frameY, canvasX, canvasY) => {
+const animatedTextureDrawFrame = (id, frameX, frameY, canvasX, canvasY) => {
     const animatedTexture = animatedTextures[id];
     animatedTexture.context.drawImage(
         animatedTexture.image,
